@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net" modified="2023-04-17T16:30:56.029Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="GGTjKWihrnUgIyWSJdUw" version="21.1.8" type="github">
+  <diagram name="Página-1" id="MXcQjXPZrHk33BSl2I53">
+    <mxGraphModel dx="1434" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#050505" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KBlg_U5y2cLM4Fd2klWW-3" value="Venda" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;strokeColor=#FFFFFF;fontFamily=Comic Sans MS;fontSize=12;fontColor=#FFFFFF;fillColor=#269AFF;" parent="1" vertex="1">
+          <mxGeometry x="540" y="370" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KBlg_U5y2cLM4Fd2klWW-6" value="(0,1)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Comic Sans MS;fontSize=12;fontColor=#FFFFFF;strokeColor=#FCFCFC;labelBackgroundColor=#141414;endArrow=none;endFill=0;" parent="1" source="KBlg_U5y2cLM4Fd2klWW-4" target="KBlg_U5y2cLM4Fd2klWW-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KBlg_U5y2cLM4Fd2klWW-4" value="Financeira" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;strokeColor=#FFFFFF;fontFamily=Comic Sans MS;fontSize=12;fontColor=#FFFFFF;fillColor=#269AFF;" parent="1" vertex="1">
+          <mxGeometry x="200" y="370" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KBlg_U5y2cLM4Fd2klWW-7" value="(0,n)" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#0F0F0F;strokeColor=#FCFCFC;fontFamily=Comic Sans MS;fontSize=12;fontColor=#FFFFFF;endArrow=none;endFill=0;" parent="1" source="KBlg_U5y2cLM4Fd2klWW-5" target="KBlg_U5y2cLM4Fd2klWW-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KBlg_U5y2cLM4Fd2klWW-5" value="finaciamento" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;strokeColor=#FFFFFF;fontFamily=Comic Sans MS;fontSize=12;fontColor=#FFFFFF;fillColor=#269AFF;" parent="1" vertex="1">
+          <mxGeometry x="354" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
