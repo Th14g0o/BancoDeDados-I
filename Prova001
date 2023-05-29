@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-29T16:41:17.778Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57" etag="zgu60SosJVMUlGh-kCf7" version="21.3.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-29T16:50:44.331Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57" etag="CU-Mgf8yWUVKl6vbB6Qd" version="21.3.5" type="github">
   <diagram name="Página-1" id="fEMNbTyZqvqJaMyc5wcC">
-    <mxGraphModel dx="2206" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2449" dy="936" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -145,7 +145,7 @@
         <mxCell id="YUFwj-CGKR2hLXwELBxc-50" value="Cronograma" style="shape=ext;margin=3;double=1;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="410" y="500" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="YUFwj-CGKR2hLXwELBxc-55" value="tarefa" style="shape=ext;margin=3;double=1;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+        <mxCell id="YUFwj-CGKR2hLXwELBxc-55" value="Tarefa" style="shape=ext;margin=3;double=1;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="410" y="750" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="YUFwj-CGKR2hLXwELBxc-63" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="YUFwj-CGKR2hLXwELBxc-62" target="YUFwj-CGKR2hLXwELBxc-55">
