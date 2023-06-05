@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-05T17:17:21.422Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="lyMSdcrzvOWXKelhvVA3" version="21.3.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-05T17:25:38.823Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="LkxUemeOD0pDh7com562" version="21.3.7" type="github">
   <diagram name="Página-1" id="0jB67gedV4cpQzeScHZd">
-    <mxGraphModel dx="1149" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1970" dy="1137" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -48,7 +48,7 @@
         <mxCell id="iWceCNxYREfOQO6mWA9c-27" value="Produto" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="39" y="310" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="iWceCNxYREfOQO6mWA9c-28" value="(1,1)" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="iWceCNxYREfOQO6mWA9c-35" target="iWceCNxYREfOQO6mWA9c-23">
+        <mxCell id="iWceCNxYREfOQO6mWA9c-28" value="(1,n)" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="iWceCNxYREfOQO6mWA9c-35" target="iWceCNxYREfOQO6mWA9c-23">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iWceCNxYREfOQO6mWA9c-29" value="Distibuidor" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
@@ -74,6 +74,12 @@
         </mxCell>
         <mxCell id="iWceCNxYREfOQO6mWA9c-35" value="" style="shape=rhombus;double=1;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="364" y="410" width="90" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="iWceCNxYREfOQO6mWA9c-39" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://chuvadenanquim.files.wordpress.com/2012/05/hajime_no_ippo024-18.jpg;" vertex="1" parent="1">
+          <mxGeometry x="150" y="810" width="500" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="iWceCNxYREfOQO6mWA9c-40" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn.idntimes.com/content-images/duniaku/post/20230303/date-winning-against-sat3f-705cadb9411e05fee5954bf19fb3f0fc.jpg;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1240" width="1000" height="563" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
