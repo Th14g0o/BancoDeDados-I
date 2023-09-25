@@ -2,7 +2,7 @@
 --Inserindo na tabela cidade do esquema DBO
 --INSERT INTO "DBO".cidade
 --(nome, estado)
---VALUES('Recife', 'PE'), ('João Pessoa', 'PE');
+--VALUES('Macaiba', 'RN');
 
 --Deletando da tabela cidade do esquema DBO
 --DELETE FROM "DBO".cidade
@@ -13,8 +13,13 @@
 --Inserindo na tabela localizacao do esquema DBO
 --INSERT INTO "DBO".localizacao
 --(latitude, longitude, id_cidade)
---VALUES(-5.825, -35.424, 3), (-8.042,-35009,9);
+--VALUES(-8.042, -35.009, 11), (-3.791,-35.598,10);
 
+INSERT INTO "DBO".tempo
+(tempo_min, tempo_max, precip_pluviom, data_coleta, id_cidade)
+VALUES(25, 29, 10, '2023-08-12', 3), (26, 29, 15, '2023-08-12', 11), (27, 30, 10, '2023-08-12', 10), 
+	  (25, 29, null, '2023-08-13', 3), (26, 30, 15, '2023-08-13', 11), (27, 31, null, '2023-08-13', 10),
+	  (26, 31, 20, '2023-08-14', 3), (26, 31, 30, '2023-08-14', 11), (26, 31, 30, '2023-08-14', 10);
 
 
 --Inserindo na tabela central do esquema DBO
@@ -25,4 +30,5 @@
 
 --O Dbeaver tava dando pau, então fui por aqui
 --ALTER TABLE "DBO".central ALTER COLUMN codigo TYPE char(5) USING codigo::char;
+
 
