@@ -44,7 +44,8 @@ delete from "DBO".tempocentral where id_tempo = 46 and codigo_central = 'CMT02' 
 
 
 
-
+--atuakizar codifos da central cujo jnome inbicia com cmt
+update "DBO".tempo set precip_pluviom = precip_pluviom * 1.05 where id_cidade = 3 and precip_pluviom is not null ;
 
 
 
