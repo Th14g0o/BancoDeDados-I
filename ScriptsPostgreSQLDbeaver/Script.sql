@@ -27,12 +27,44 @@
 --(codigo)
 --VALUES('CMT01'), ('CMT02');
 
+INSERT INTO "DBO".tempocentral
+(id_tempo, codigo_central)
+VALUES(45, 'CMT01'), (47, 'CMT01'), (46, 'CMT02'), (48, 'CMT02');
 
 --O Dbeaver tava dando pau, então fui por aqui
 --ALTER TABLE "DBO".central ALTER COLUMN codigo TYPE char(5) USING codigo::char;
+SELECT * FROM "DBO".central
+
+SELECT * FROM "DBO".tempo
+
+SELECT * FROM "DBO".tempocentral where codigo_central ='CMT02'; 
+
+delete from "DBO".tempocentral where id_tempo = 45;
+delete from "DBO".tempocentral where id_tempo = 46 and codigo_central = 'CMT02' ;
 
 
 
+
+
+
+
+--Cliente table
+ALTER TABLE public.cliente ALTER COLUMN senha TYPE varchar(255) USING senha::varchar;
+
+select * from public.cliente;
+
+delete from public.cliente where email is null and dt_nasc is null;
+delete from public.cliente where email is null or dt_nasc is null;
+
+INSERT INTO public.cliente
+(nome, email, cpf)
+VALUES('C Heusser', 'cheusser', '12345678901'),('S Silva',  null, '12345678902'), ('F Machado', null, '12345678903');
+
+
+
+
+--
+--
 --Inserts no projeto integrador
 
 INSERT INTO "PI".usuario
