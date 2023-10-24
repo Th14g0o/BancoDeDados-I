@@ -262,11 +262,21 @@ where id_cidade in (
 );
 --aninhnado selects, esse selec vai ser tipo uma lista de valores.
 -- esse aninhamento vai ser equivalente a in(3,11)
-
-
-
+--esse metodo so funciona para resultados de uma unica tabela, e precisa acessar dados de uma unica outra tabela
+--para resolver se usa alg como o comando
+--select t.data_coleta, t.tempo_max, cnome, c.estado 
+--from "DBO".tempo t  inner join "DBO".cidade ...
+--where ...;
+--obbs:explo so pra mostrar do professor
 select id from "DBO".cidade
 where nome in ('Natal', 'natal', 'NATAL', 'Macaiba')
+
+
+select t.data_coleta, t.tempo_max , c.nome
+from "DBO".tempo t , "DBO".cidade c 
+where c.id = t.id_cidade and (c.nome = 'Natal' or c.nome = 'Fortaleza');
+
+
 
 
 
