@@ -155,30 +155,34 @@ VALUES('2023-09-26', 3, 'LatinoAmericano', 'Th14g0o', 2),
 
 
 
-
-
 select * from "PI".post  d  ;
 select * from "PI".denuncia  d  ;
 select * from "PI".grupo g    ;
 select * from "PI".pertence p   ;
 
+
 --Item 7. Três comandos SELECT com junção interna (INNER JOIN)
-select m from "PI".mensagem m inner join "PI".grupo g on (m.id_grupo  = 8 and g.id_grupo = 8);
+select * from "PI".mensagem m inner join "PI".usuario u  on (m.id_grupo  = 8 and m.nome_usuario_id = u.nome_id);
 --pegando mensagens do grupo João dos lanche(Visualizando grupo)
-select p from "PI".post p  inner join "PI".usuario u on (p.nome_usuario_id  = 'JoaoDosLanche' and u.nome_id = 'JoaoDosLanche');
+select * from "PI".post p  inner join "PI".usuario u on (p.nome_usuario_id  = 'JoaoDosLanche' and u.nome_id = 'JoaoDosLanche');
 --Pegando posts do usuario JoaoDosLanche(Visualizar contas)
-select p from "PI".comentario c   inner join "PI".post p on (p.id_post  = 1 and c.id_post  = 1);
+select * from "PI".comentario c   inner join "PI".usuario u on (u.nome_id  = c.nome_id_usuario  and c.id_post  = 1);
 --Pegando comentarios de um post(Visualizar postagem)
 
 
 --Item 8. Dois comandos SELECT com junção externa parcial (LEFT ou RIGHT OUTER JOIN)
-select * from "PI".denuncia d  right outer join "PI".usuario u on u.nome_id  = d.nome_usuario_denunciado and d.id_denuncia is not null;
+select * from "PI".denuncia d  right outer join "PI".usuario u on u.nome_id  = d.nome_usuario_denunciado;
 --pegar usuarios denunciados (gerenciar usuarios)
-select * from "PI".grupo g  right outer join "PI".usuario u  on(g.nome_id_usuario  = 'Th14g0o' and g.nome_id_usuario = u.n)
-;
---ver membros do gurpo   joão dos lanche(gerenciar participação em grupos)         
+select u.nome_id, count(g.*)  from  "PI".usuario u  left outer join "PI".grupo g on( g.nome_id_usuario = u.nome_id ) group by u.nome_id  ;
+--usarios e quantidade de grupos que ele criou (pesquisar grupos)        
                        
 --Item 9. Um comando SELECT com junção externa total (FULL OUTER JOIN)
+alter table "PI".moderador add column nome_id varchar(30) null unique;
+ --comando usado por motivos academicos
+select * from "PI".usuario u  full join "PI".moderador m on  m.nome_id = u.nome_id  ;
+--pegando adms e usuarios e agrupando se possuem o mesmo nome id
+
+
 
 --Item 10. Um comando para criar uma VIEW envolvendo pelo menos duas tabelas.
 create view "PI".Perfil
@@ -223,6 +227,7 @@ call "PI".LimparDenunciasDeUmUsuario('JoaoDosLanche')
 
 --Item 13. Dois comandos definindo funções (UDFs).
 --quantidade de demumcias de um usuario
+
 --quantidade de membros de um grupo
 
 --Item 14. Um comando para executar cada uma das funções definidas no Item 13.
@@ -271,5 +276,3 @@ $$;
 
 
 --apagar usuaurio e seus posts
-
-
