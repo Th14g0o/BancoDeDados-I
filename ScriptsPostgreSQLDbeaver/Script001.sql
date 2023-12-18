@@ -149,3 +149,127 @@ VALUES('2023-09-26', 3, 'LatinoAmericano', 'Th14g0o', 2),
 	  ('2023-09-26', 9, 'Th14g0o', 'Welli', 3);
 
 
+
+
+
+
+
+
+
+
+select * from "PI".post  d  ;
+select * from "PI".denuncia  d  ;
+select * from "PI".grupo g    ;
+select * from "PI".pertence p   ;
+
+--Item 7. Três comandos SELECT com junção interna (INNER JOIN)
+select m from "PI".mensagem m inner join "PI".grupo g on (m.id_grupo  = 8 and g.id_grupo = 8);
+--pegando mensagens do grupo João dos lanche(Visualizando grupo)
+select p from "PI".post p  inner join "PI".usuario u on (p.nome_usuario_id  = 'JoaoDosLanche' and u.nome_id = 'JoaoDosLanche');
+--Pegando posts do usuario JoaoDosLanche(Visualizar contas)
+select p from "PI".comentario c   inner join "PI".post p on (p.id_post  = 1 and c.id_post  = 1);
+--Pegando comentarios de um post(Visualizar postagem)
+
+
+--Item 8. Dois comandos SELECT com junção externa parcial (LEFT ou RIGHT OUTER JOIN)
+select * from "PI".denuncia d  right outer join "PI".usuario u on u.nome_id  = d.nome_usuario_denunciado and d.id_denuncia is not null;
+--pegar usuarios denunciados (gerenciar usuarios)
+select * from "PI".grupo g  right outer join "PI".usuario u  on(g.nome_id_usuario  = 'Th14g0o' and g.nome_id_usuario = u.n)
+;
+--ver membros do gurpo   joão dos lanche(gerenciar participação em grupos)         
+                       
+--Item 9. Um comando SELECT com junção externa total (FULL OUTER JOIN)
+
+--Item 10. Um comando para criar uma VIEW envolvendo pelo menos duas tabelas.
+create view "PI".Perfil
+as
+select p.id_post ,
+	p.texto, 
+	p.imagem , 
+	u.nome_id , 
+	u.nome , 
+	u.descricao
+    		from "PI".post p  right join "PI".usuario u
+                        on u.nome_id  = p.nome_usuario_id ;
+--Pegando posts de um usuario(VerPerfil[Gerenciar Perfil])
+select * from "PI".Perfil;
+select * from "PI".Perfil where nome_id = 'JoaoDosLanche';
+drop view "PI".Perfil;
+
+--Item 11. Dois comandos definindo procedimentos armazenados.
+create procedure "PI".insertAdm(s varchar(30))
+language plpgsql
+as $$
+	declare 
+		_id int;
+	begin
+		_id := max(id)+1 from "PI".moderador;
+		insert into "PI".moderador(senha, id) values (s, _id);
+	end
+$$;
+--adicionar adm
+create procedure "PI".LimparDenunciasDeUmUsuario(id varchar(30))
+language sql
+as $$
+	delete from  "PI".denuncia  where nome_usuario_denunciado = id or id_post in 
+		(select p.id_post from "PI".post p where  nome_usuario_id  = id);	
+$$;
+--apagar denuncias em massa para um usuario por motivos pessoais invalidos(Gerencia denuncias)
+
+--Item 12. Um comando para executar cada um dos procedimentos armazenados definidos no Item 11.
+call "PI".insertAdm('adm');
+call "PI".LimparDenunciasDeUmUsuario('JoaoDosLanche')
+
+
+--Item 13. Dois comandos definindo funções (UDFs).
+--quantidade de demumcias de um usuario
+--quantidade de membros de um grupo
+
+--Item 14. Um comando para executar cada uma das funções definidas no Item 13.
+
+--Item 15. Dois comandos definindo gatilhos (triggers) e suas respectivas funções.
+update "PI".usuario  set nome  = 'Santa Rosa' where nome_id = 'Gabriel';
+
+create trigger MsgEditarSucess 
+	before update on "PI".usuario  
+	for each row execute function "PI".msg_exito_editar();
+
+create or replace function "PI".msg_exito_editar()
+returns trigger 
+language plpgsql
+as $$
+begin 
+	raise info 'A tabela de usuario foi atualizada: % - %.', new.nome_id, new.nome;
+	return new;
+end;
+$$;
+drop trigger MsgEditarSucess on "PI".usuario ;
+--Msg de sucesso ao editar perfil(gerenciar perfil)
+
+
+create trigger MsgCriarPostSucess 
+	before insert on "PI".post 
+	for each row execute function "PI".msg_exito_criar_post();
+
+create or replace function "PI".msg_exito_criar_post()
+returns trigger 
+language plpgsql
+as $$
+begin 
+	raise info 'A tabela de de post foi atualizado foi atualizada: % - %.', new.id_post, new.tipo;
+	return new;
+end;
+$$;
+--MOstrando mensageem apos de sucesso apos criar post[Gerenciar posts]
+
+
+
+
+
+
+
+
+
+--apagar usuaurio e seus posts
+
+
