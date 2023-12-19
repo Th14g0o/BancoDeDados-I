@@ -161,6 +161,7 @@ select * from "PI".grupo g    ;
 select * from "PI".pertence p   ;
 
 
+
 --Item 7. Três comandos SELECT com junção interna (INNER JOIN)
 select * from "PI".mensagem m inner join "PI".usuario u  on (m.id_grupo  = 8 and m.nome_usuario_id = u.nome_id);
 --pegando mensagens do grupo João dos lanche(Visualizando grupo)
@@ -226,11 +227,36 @@ call "PI".LimparDenunciasDeUmUsuario('JoaoDosLanche')
 
 
 --Item 13. Dois comandos definindo funções (UDFs).
---quantidade de demumcias de um usuario
+create or replace function "PI".QuantDenun
+(nomeUser varchar(30))
+returns int
+as $$
+declare
+  quant int;
+begin 
+	quant :=  count(*) from "PI".denuncia d  where d.nome_usuario_denunciado = nomeUser or d.id_post in 
+		(select id_post from "PI".post p where p.nome_usuario_id  = nomeUser);
+	return quant;
+end;
+$$ language plpgsql;
+--quantidade de denumcias de um usuario( gerenciar denuncias)
 
+create or replace function "PI".QuantMembs
+(idGrupo int4)
+returns int
+as $$
+declare
+  quant int;
+begin 
+	quant := count(*) from "PI".pertence p  where p.id_grupo = idGrupo ;
+	return quant + 1;
+end;
+$$ language plpgsql;
 --quantidade de membros de um grupo
 
 --Item 14. Um comando para executar cada uma das funções definidas no Item 13.
+select "PI".QuantDenun('Th14g0o');
+select "PI".QuantMembs(8); 
 
 --Item 15. Dois comandos definindo gatilhos (triggers) e suas respectivas funções.
 update "PI".usuario  set nome  = 'Santa Rosa' where nome_id = 'Gabriel';
