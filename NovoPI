@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-04T19:12:29.967Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="GDUXm7akpYIfgoDoB8UY" version="24.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-04T19:13:29.821Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="plTyvMD7AG3FDzlqRD_q" version="24.0.1" type="github">
   <diagram name="Página-1" id="hJI8x6e6vZQyckNMQl_T">
-    <mxGraphModel dx="1980" dy="1133" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1386" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
         <mxCell id="47Ae1qPEykkw_I0VPfrG-32" value="(1,1)" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="47Ae1qPEykkw_I0VPfrG-2" target="47Ae1qPEykkw_I0VPfrG-31">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="47Ae1qPEykkw_I0VPfrG-35" value="(1,n)" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="47Ae1qPEykkw_I0VPfrG-2" target="47Ae1qPEykkw_I0VPfrG-34">
+        <mxCell id="47Ae1qPEykkw_I0VPfrG-35" value="(1,1)" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="47Ae1qPEykkw_I0VPfrG-2" target="47Ae1qPEykkw_I0VPfrG-34">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="47Ae1qPEykkw_I0VPfrG-2" value="Artista" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
@@ -85,7 +85,7 @@
         <mxCell id="47Ae1qPEykkw_I0VPfrG-33" value="(0,n)" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="47Ae1qPEykkw_I0VPfrG-14" target="47Ae1qPEykkw_I0VPfrG-31">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="47Ae1qPEykkw_I0VPfrG-36" value="(n, 1)" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="47Ae1qPEykkw_I0VPfrG-14" target="47Ae1qPEykkw_I0VPfrG-34">
+        <mxCell id="47Ae1qPEykkw_I0VPfrG-36" value="(1, 1)" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="47Ae1qPEykkw_I0VPfrG-14" target="47Ae1qPEykkw_I0VPfrG-34">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="47Ae1qPEykkw_I0VPfrG-14" value="Postagem" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
